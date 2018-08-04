@@ -1,0 +1,36 @@
+{
+  "name": "nplautocomplete",
+  "version": "0.0.3",
+  "description": "A natural language autocomplete library written in TypeScript.",
+  "main": "build/index.js",
+  "typings": "build/index",
+  "scripts": {
+    "build": "tsc -p ./src && browserify ./build/index.js --standalone nplautocomplete -o ./demo/js/nplautocomplete.js && uglifyjs ./demo/js/nplautocomplete.js -o ./demo/js/nplautocomplete.min.js",
+    "test": "mocha ./build/test --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/singhmohancs/nplautocomplete.git"
+  },
+  "keywords": [
+    "natural language form",
+    "autocomplete",
+    "typescript"
+  ],
+  "author": "singhmohancs@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/singhmohancs/nplautocomplete/issues"
+  },
+  "homepage": "https://github.com/singhmohancs/nplautocomplete#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3"
+  },
+  "dependencies": {
+    "es6-shim": "^0.35.1"
+  },
+  "ambientDependencies": {
+    "es6-shim": "registry:dt/es6-shim#0.31.2+20160215162030"
+  }
+}
